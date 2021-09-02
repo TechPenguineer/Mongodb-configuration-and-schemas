@@ -12,9 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pymongo import *
+import pymongo
+from private.LOGIN import USERNAME,PASSWORD
 
-client = MongoClient()
-
-client = pymongo.MongoClient("mongodb+srv://RyanR:<password>@user.od49w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://"+USERNAME+":"+PASSWORD+"@user.od49w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db = client.test
